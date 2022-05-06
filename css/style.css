@@ -25,30 +25,46 @@ img{
   font-family: 'Open Sans', sans-serif;
 }
 
-body > section {
-  width: 40%;
-  margin: 30px auto;
+section {
+  display: flex;
+  width: 90%;
+  margin: 40px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  flex-direction: column;
 }
 
 #grid {
-  background: rgb(222, 216, 216);
-  width: 450px;
-  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 612px;
+  height: 612px;
 }
 
 .box {
-  border: 1px solid black;
-  width: 150px;
-  height: 150px;
-  float: left;
+  background: #5a5a5a;
+  width: 200px;
+  height: 200px;
+  margin: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 80px;
+  font-size: 150px;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.box:hover {
+  transition: .4s;
+  transform: scale(1.08);
+  background: #a5a3a3;
 }
 
 .winClass {
-  background-color: yellow;
+  background-color: rgb(218, 218, 23);
 }
 
 .message {

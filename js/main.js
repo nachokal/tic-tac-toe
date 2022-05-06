@@ -1,4 +1,4 @@
-let currSymbol = 'x'
+let currSymbol = 'X'
 let turnCounter = 0
 let lines = {
     row1: ['box1', 'box2', 'box3'],
@@ -27,10 +27,10 @@ function addSymbolAndDisable(e) {
 }
 
 function toggleCurrSymbol() {
-    if (currSymbol === 'x') {
-        currSymbol = 'o'
-    } else if (currSymbol === 'o') {
-        currSymbol = 'x'
+    if (currSymbol === 'X') {
+        currSymbol = 'O'
+    } else if (currSymbol === 'O') {
+        currSymbol = 'X'
     }
 }
 
@@ -56,16 +56,16 @@ function checkLine(line) {
             let boxContent = document.querySelector(`#${item}`).firstChild.textContent
             lineContent.push(boxContent)
             let xOcurrance = lineContent.filter((item) => {
-                return item == 'x' 
+                return item == 'X' 
             }).length
             let oOcurrance = lineContent.filter((item) => {
-                return item == 'o' 
+                return item == 'O' 
             }).length
             if (xOcurrance === 3) {
-                return win('x', line)
+                return win('X', line)
             }
             if (oOcurrance === 3) {
-                return win('o', line)
+                return win('O', line)
             }
         }
     })
@@ -85,7 +85,7 @@ function win(player, line) {
 
 function resetGame() {
     console.log('bye');
-    currSymbol = 'x'
+    currSymbol = 'X'
     turnCounter = 0
     isOver = false
     document.querySelector('#message').innerHTML = null
